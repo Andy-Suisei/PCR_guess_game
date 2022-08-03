@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="data:;base64,{{ img_stream }}">
+    <h1>上圖是哪一隻角色？</h1>
+    <form action="/submit" method="post">
+        <label>
+            <input type="radio" name="char" value="{{ choose.num1 }}">{{ choose.num1 }}
+            <input type="radio" name="char" value="{{ choose.num2 }}">{{ choose.num2 }}
+            <input type="radio" name="char" value="{{ choose.num3 }}">{{ choose.num3 }}
+            <input type="radio" name="char" value="{{ choose.num4 }}">{{ choose.num4 }}
+            <input type="submit" value="確認">
+        </label>
+    </form>
+</body>
+</html>

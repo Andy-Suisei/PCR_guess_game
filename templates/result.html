@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="data:;base64,{{ img }}">
+    {% if content.TF %}
+    <h1>恭喜你答對了</h1>
+    {% endif %}
+    {% if not content.TF %}
+    <h1>可惜答錯了</h1>
+    <h4>正確答案是{{ content.answer }}</h4>
+    {% endif %}
+
+    <form action="/">
+        <input type="submit" value="再玩一次">
+    </form>
+</body>
+</html>
